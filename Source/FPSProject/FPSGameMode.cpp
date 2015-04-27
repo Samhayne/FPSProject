@@ -2,6 +2,7 @@
 
 #include "FPSProject.h"
 #include "FPSGameMode.h"
+#include "FPSHUD.h"
 //#include "FPSCharacter.h"
 
 AFPSGameMode::AFPSGameMode(const FObjectInitializer& ObjectInitializer)
@@ -15,6 +16,8 @@ AFPSGameMode::AFPSGameMode(const FObjectInitializer& ObjectInitializer)
 	{
 		DefaultPawnClass = PlayerPawnObject.Class;
 	}
+
+	HUDClass = AFPSHUD::StaticClass();
 }
 
 // Note that engine version 4.3 changed the method's name to StartPlay(), because of this engine versions before 4.3, or older tutorials, use BeginPlay()
